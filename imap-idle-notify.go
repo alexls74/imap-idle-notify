@@ -160,8 +160,8 @@ func htmlToText(htmlStr string) string {
 // --- Notifiers ---
 func sendGotify(sender, subject, body string) {
 	payload := map[string]interface{}{
-		"title":    fmt.Sprintf("Email from %s", sender),
-		"message":  fmt.Sprintf("Subject: %s\n\n%s", subject, body),
+		"title":    "Вам письмо",
+		"message":  fmt.Sprintf("От: %s\nТема: %s", sender, subject),
 		"priority": GotifyPriority,
 	}
 	jsonData, err := json.Marshal(payload)
