@@ -87,11 +87,11 @@ var (
 	NotifierType   = env("NOTIFIER_TYPE", "gotify") // gotify or ntfy
 	GotifyURL      = env("GOTIFY_URL", "")
 	GotifyToken    = env("GOTIFY_TOKEN", "")
-	GotifyPriority = envInt("GOTify_PRIORITY", 5)
+	GotifyPriority = envInt("GOTify_PRIORITY", 0)
 	NtfyUrl        = env("NTFY_URL", "https://ntfy.sh")
 	NtfyTopic      = env("NTFY_TOPIC", "")
 	NtfyAuthToken  = env("NTFY_AUTH_TOKEN", "")
-	NtfyPriority   = envInt("NTFY_PRIORITY", 5)
+	NtfyPriority   = envInt("NTFY_PRIORITY", 1)
 
 	AllowedFrom = make(map[string]bool)
 )
